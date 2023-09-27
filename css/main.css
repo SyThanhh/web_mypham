@@ -4,7 +4,11 @@
     object-fit: cover;
 }
 
- .footer-header ul {
+footer{
+    margin-top: 20px;
+}
+
+.footer-header ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
