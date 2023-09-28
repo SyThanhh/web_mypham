@@ -1,13 +1,16 @@
 body{
-    background-image: url(../image/login/login-bg.png);
+    background-image: url("../image/login/login-bg.png");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .login-form{
-    padding: 150px 50px 50px 50px;
+    padding: 150px 50px 150px 50px;
     width: 40%;
     margin: 0 auto; 
     background-color: #fff;
-    
+    ;
 }
 
 .login-form__header{
@@ -29,6 +32,16 @@ body{
     margin-top: 15px;
 }
 
+.control>input{
+    padding-left: 10px;
+    margin-top: 5px;
+    width: 99%;
+    height: 36px;
+    align-items: 35px;
+    padding-bottom: 3px;
+    color: rgb(101, 99, 99);
+}
+
 input .checkbox{
     margin-left: 50%;
 }
@@ -41,15 +54,8 @@ input .checkbox{
     color: red;
 }
 
-.control input{
-    margin-top: 5px;
-    width: 99%;
-    height: 35px;
-}
-
 .control>input::placeholder{
     font-size: 15px;
-    padding-left: 10px;
 }
 
 
@@ -59,8 +65,11 @@ input .checkbox{
     margin-bottom: 20px;
     border: none;
     background-color: black;
-    color: white;
     cursor: pointer;
+}
+
+.action-login-primary a{
+    color: white;
 }
 
 .secondary{

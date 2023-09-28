@@ -64,7 +64,7 @@ nav>ul>li:hover .mega-menu2{
     visibility: hidden;
     flex-wrap: wrap;
     height: 500px;
-    transition: 0.6s;
+    transition: 0.3s;
     left: 0px;
     background-color: white;
     box-shadow: 0px 2px 3px 1px lightgray;
@@ -115,6 +115,7 @@ nav>ul>li:hover .mega-menu2{
 
 .mega-menu2-items-sub li{
     margin: 9px;
+    position: relative;
 }
 
 .mega-menu2-items-sub .mega-menu2-items-list{
@@ -135,14 +136,16 @@ nav>ul>li:hover .mega-menu2{
     font-weight: 500;
     border-bottom: 2px solid;
     border-bottom-color: rgb(41, 40, 40);
-    transition: all 0.25s ease-in-out;
+    transform: scale(0);
+    transition: transform 0.45s ease-in-out;
+    transform-origin: right;
 }
-
 
 @media (max-width: 1000px) {
 
     .navigation{
         top: 100%;
+        
     }
 
     .navigation ul{
@@ -150,39 +153,67 @@ nav>ul>li:hover .mega-menu2{
         padding: 0;
     }
 
-    ul {
-        display: block;
-        list-style-type: disc;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        padding-inline-start: 40px;
-    }
-
     /*menu1*/
-    .navigation li .nav_items {
-        font-weight: 400;
-        padding: 20px;
-        text-transform: uppercase;
-        word-wrap: break-word;
+
+    .navigation>ul>li#one:hover{
+        margin-bottom: 100px;
     }
 
-    .navigation li a{
-        position: relative;
+    .mega-menu-items{
+        margin-left: 28%;
+        margin-top: 3px;
+    }
+
+    .mega-menu-items ul li{
         display: block;
-        text-decoration: none;
+        text-align: left;
+        padding: 5px;
+        border: none;
+        width: 100%;
     }
 
-    .mega-menu .mega-menu-items > ul{
-        display: flex;
+
+    div .mega-menu-items{
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        top: -380px;
+        left: -25%;
     }
+
+
+    .mega-menu-items ul{
+        margin-left: 20px;
+    }
+
 
     /*menu2*/
 
+    .navigation>ul>li.pos:hover{
+        margin-bottom: 500px;
+    }
+
+    .mega-menu2-items{
+        margin-top: 3px;
+    }
+
+    .mega-menu2-items ul li ul li{
+        padding: 5px;
+        border: none;
+        width: 100%;
+    }
+
+    .mega-menu2-items{
+        position: absolute;
+        width: 100%;
+        top: -700px;
+        display: flex;
+        left: -12%;
+    }
+
     .mega-menu2-items > ul{
-        justify-content: space-around;
-        margin-left: -50px;
+        justify-content: space-between;
+        margin-right: -10%;
     }
 
     .mega-menu2-items>ul>li>img{
@@ -190,10 +221,7 @@ nav>ul>li:hover .mega-menu2{
         height: 150px;
     }
 
-    .mega-menu2-items-all{
-        margin-left: -170px;
-    }
-
+   
     .mega-menu2-items-sub .mega-menu2-items-list{
         font-weight: 400;
         font-size: 14px;
