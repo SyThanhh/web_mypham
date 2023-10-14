@@ -1,0 +1,45 @@
+.navbar-icon>ul>li .search_modal .search{
+    opacity: 0;
+    top: 100%;
+    visibility: visible;
+    overflow: hidden;
+}
+
+.search{
+    display: flex;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    flex-wrap: wrap;
+    height: 200px;
+    left: 0px;
+    background-color: white;
+    box-shadow: 0px 2px 3px 1px lightgray;
+    justify-content: center;
+    align-items: center;
+}
+
+.search input{
+    padding: 25px 25px 25px 60px;
+    margin-right: 30px;
+    width: 700px;
+}
+
+
+.header__search > input::placeholder{
+    font-size: 19px;
+
+}
+
+#searchIcon{
+    top: 45%;
+    padding-left: 15px;
+}
+
+.button{
+    height: 50px;
+    padding-left: 25px;
+    padding-right: 25px;
+}

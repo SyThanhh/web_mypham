@@ -1,0 +1,75 @@
+.beautiful .carousel{
+    width: 80%;
+}
+
+.carousel-inner{
+    left: 20%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    width: 500px;
+}
+
+.beautiful .carousel-controls{
+    position: absolute;
+    left: 57%;
+    bottom: 40px;
+    z-index: 10;
+    transform: translateX(-50%);
+}
+
+.carousel-indicators{
+    position: relative;
+}
+
+
+.beautiful .carousel-indicators li{
+    height: 70px;
+    width: 110px;
+    margin: 0 8px;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+}
+
+.carousel-indicators li.active{
+    border-color: black;
+}
+
+.beautiful .carousel-control-prev,
+.beautiful .carousel-control-next{
+    height: 60px;
+    width: 60px;
+    opacity: 1;
+    z-index: 3;
+    transform: translateY(-50%);
+    position: absolute;
+    top: -300%;
+    visibility: hidden;
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next{
+    right: -110px;
+}
+
+
+.beautiful .carousel-control-prev-icon{
+    bottom: 100%;
+    transform: translateY(45%);
+    color: grey;
+}
+
+.beautiful .carousel-control-next-icon{
+    bottom: 100%;
+    transform: translateY(45%);
+    color: grey;
+}
+
+.beautiful .carousel-control-prev-icon:hover{
+    color: grey;
+    visibility: visible;
+}

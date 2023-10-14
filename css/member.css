@@ -1,0 +1,33 @@
+.container-fluid{
+    width: 100%;
+    background-image: url("../image/login/login-bg.png");
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: repeat;
+}
+
+.frame1{
+    width: 57%;
+    height: 440px;
+    border: 5px solid #4477BD;
+}
+
+.member1 img{
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.member2{
+    margin-left: 600px;
+}
+.member2 img{
+    top: 5%;
+    left: 15%;
+}
+
+.frame2{
+    width: 95%;
+    height: 450px;
+    border: 5px solid rgb(121,163,220);
+}

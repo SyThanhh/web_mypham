@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<div lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Responsive Navbar using HTML & CSS</title>
     <!-- Bootstrap-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
@@ -17,7 +16,7 @@
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <script src="../lib/swiper-bundle-js.min.js"></script>
     
-    <link rel="stylesheet" href="../css/signin.css">
+    <!-- Các thẻ css-->
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/carousel.css">
@@ -25,10 +24,13 @@
     <link rel="stylesheet" href="../css/homeProductItem.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/megamenu.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/member.css">
 
 </head>
+
 <body>
-    <div class="login-container">
+    <div>
         <!--Header -->
         <header>
             <div class="logo">
@@ -37,7 +39,7 @@
             <input type="checkbox" id="nav_check" hidden>
             <nav class="navigation">
                 <ul>
-                    <li>
+                    <li id = "one">
                         <a class = "pos" href="">VỀ LANEIGE</a>
                         <div class="mega-menu">
                             <div class="mega-menu-items">
@@ -50,8 +52,9 @@
                         </div>
                         
                     </li>
-                    <li>
-                        <a class= "pos" href="">CHĂM SÓC DA</a>
+
+                    <li class = "pos">
+                        <a href="">CHĂM SÓC DA</a>
                         <div class="mega-menu2">
                             <div class="mega-menu2-items">
                                 <a class="mega-menu2-items-all" href="#">Tất cả</a>
@@ -119,8 +122,8 @@
                         </div>
                     </li>
 
-                    <li>
-                        <a class = "pos" href="">TRANG ĐIỂM</a>
+                    <li class = "pos">
+                        <a href="">TRANG ĐIỂM</a>
                         <div class="mega-menu2">
                             <div class="mega-menu2-items">
                                 <a class="mega-menu2-items-all" href="#">Tất cả</a>
@@ -163,12 +166,6 @@
                     <li>
                         <a href="">THÀNH VIÊN THỰC HIỆN</a>
                     </li>
-                    <li>
-                        <a href="">SỰ KIỆN </a>
-                    </li>
-                    <li>
-                        <a href="">LIÊN HỆ</a>
-                    </li>
                 </ul>
             </nav>
             <label for="nav_check" class="nav_check">
@@ -188,10 +185,17 @@
                             <i class="fas fa-map-pin"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-search"></i>
+                    <li class="search_modal">
+                        <a href="#">
+                            <i class="fas fa-search" id="Icon" onclick="opensearch()"></i>
                         </a>
+                        <div class = "search" id="searchForm">
+                            <div class = "header__search">
+                                <i class="fas fa-search position-absolute" id="searchIcon"></i>
+                                <input type="text" class="form-control" placeholder="Gõ từ khóa" id="searchInput" style="width: 400px; height: 50px;">
+                            </div>
+                            <button type="button" class="btn ml-5 border button"> Tìm kiếm </button>
+                        </div>
                     </li>
                     <li>
                         <a href="">
@@ -200,85 +204,81 @@
                     </li>
                </ul>
             </div>
-
         </header>
 
-        <div class="header-bottom-line d-flex justify-content-between pt-5">
-            <hr style="width: 25%; height: 10px;">
-            <hr style="width: 25%; float: right;">
-        </div>
+       <div class="header-bottom-line d-flex justify-content-between pt-5">
+        <hr style="width: 25%; height: 10px;">
+        <hr style="width: 25%; float: right;">
+       </div>
 
-        <div class="link d-flex" style="margin-left: 50px; font-size: 18px; padding-top: 100px;">
-            <a class="text-dark" style="margin-right: 10px;" href="../html/index.html">Trang chủ</a>
-            <a class="text-dark" style="margin-right: 10px;" href="#"> > </a>
-            <a class="text-dark" href="#">
-                <b>
-                    Đăng nhập
-                </b>
-            </a>
-        </div>
-
-        <!--Sign In Form-->
-        <div class="login-form">
-            <div class="login-form__header">
-                <h1 class="login-form__heading">ĐĂNG NHẬP</h1>
-            </div>
-    
-            <div class="login-form__form">
-                <div class="login-form__field">
-                    <label class="label mb-2" for="email">
-                        <span>Email/Số điện thoại</span>
-                    </label> 
-                    <div class="control mb-4">
-                        <input placeholder="Email/Số điện thoại" name="login[username]" value="" autocomplete="off" id="email" type="text" class="input-text" title="Email/Số điện thoại" data-mage-init="{&quot;mage/trim-input&quot;:{}}" data-validate="{required:true, &#39;mobileloginvalidationrule&#39;:true}"></div>
-                    </div>
-                </div>
-    
-                
-                <div class="login-form__field">
-                    <label for="pass" class="label mb-2">
-                        <span>Mật khẩu</span>
-                    </label> 
-                    <div class="control mb-4">
-                        <input placeholder="Mật khẩu" name="login[password]" type="password" autocomplete="off" class="input-text" id="pass" title="Mật khẩu" data-validate="{required:true}"></div>
-                    </div> 
-
-                    <div class="login-form__field">
-                        <input type="checkbox" name="remember_pass" class="checkbox">
-                        <label for="remember_pass" class="label">
-                            <span>Nhớ tài khoản</span>
-                        </label>
-                    </div>
-    
-                    <div class="login-form__field">
-                        <div class="primary">
-                            <button type="submit" class="action-login-primary" name="send" id="send2">
-                                <a href="../html/index.html">Đăng nhập</a>
-                            </button>
-                        </div>
-                        <div class="secondary">
-                            <a class="action_remind" href="">
-                                <span>Quên mật khẩu</span>
-                            </a>   
-                            <a href="../html/indexSignUp.html" class="action_create">
-                                <span>Tạo tài khoản mới</span>
-                            </a> 
-                        </div>
-                    </div>
-
-                    <div class="socialloginlogin-login">
-                        <p>- Hoặc -</p>
-                        <button>
-                            <a class="facebook-button-link" href="">Đăng nhập bằng Facebook</a>  
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr style="height: 2px;">
+       <div class="container-fluid p-5 flex-direction-column" style="padding-top: 80px;">
         
-        <!-- Footer-->
-        <footer>
+            <div class="link d-flex" style="margin-top: 40px; margin-bottom: 50px; font-size: 18px;">
+                <a class="text-dark" style="margin-right: 10px;" href="../html/index.html">Trang chủ</a>
+                <a class="text-dark" style="margin-right: 10px;" href="#"> > </a>
+                <a class="text-dark" href="#">
+                    <b>
+                        Thành viên thực hiện
+                    </b>
+                </a>
+            </div>
+
+
+            <div class="row mb-5 ">
+                <h1 class="text-align-center d-flex justify-content-center" style="color: #285da8; margin-bottom: 50px;">THÀNH VIÊN THỰC HIỆN</h1>
+            </div>
+
+            <div class="row ml-5 mb-5 member1" style="padding-left: 30px;">
+                <div class="col-10 d-flex position-relative">
+                    <div class="col-5 d-flex position-relative">
+                        <div class="frame1"></div>
+                        <img class="position-absolute img" src="../image/member/member_Thanh.jpg" alt="" style="width: 280px; height: 400px;">
+                    </div>
+    
+                    <div class="col-5" style="font-size: 22px;">
+                        <b style="font-size: 30px;">
+                            Nguyễn Sỹ Thanh
+                        </b>
+
+                        <p style="margin-top: 20px;">
+                            MSSV: 21023481
+                        </p>
+
+                        <p>
+                            Class: DHHTTT17A
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5 member2">
+                <div class="col-10 d-flex position-relative justify-content-">
+                    <div class="col-5 d-flex position-relative" style="margin-right: 170px;">
+                        <div class="frame2"></div>
+                        <img class="position-absolute img" src="../image/member/member_Anh.jpg" alt="" style="width: 260px; height: 410px;">
+                    </div>
+    
+                    <div class="col-5" style="font-size: 22px;">
+                        <b style="font-size: 30px;">
+                            Nguyễn Thị Ánh
+                        </b>
+
+                        <p style="margin-top: 20px;">
+                            MSSV: 21029911
+                        </p>
+
+                        <p>
+                            Class: DHHTTT17A
+                        </p>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <hr style="height: 2px;">
+
+         <!-- Footer-->
+         <footer>
             <div class="container">
                 <div class="d-flex justify-content-between">
                         <div class="footer-header">
@@ -332,9 +332,7 @@
                 </div>
             </div>
         </footer>
-
     </div>
-
     <script src="../js/homeProductItem.js"></script>
     <script src="../js/search.js"></script>
 </body>

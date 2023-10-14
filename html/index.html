@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../css/homeProductItem.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/megamenu.css">
+    <link rel="stylesheet" href="../css/search.css">
 
 </head>
 <body>
@@ -161,13 +162,7 @@
                             </div>
                         </li>
                         <li>
-                            <a href="">THÀNH VIÊN THỰC HIỆN</a>
-                        </li>
-                        <li>
-                            <a href="">SỰ KIỆN </a>
-                        </li>
-                        <li>
-                            <a href="">LIÊN HỆ</a>
+                            <a href="../html/member.html">THÀNH VIÊN THỰC HIỆN</a>
                         </li>
                     </ul>
                 </nav>
@@ -188,10 +183,17 @@
                                 <i class="fas fa-map-pin"></i>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <i class="fas fa-search"></i>
+                        <li class="search_modal">
+                            <a href="#">
+                                <i class="fas fa-search" id="Icon" onclick="opensearch()"></i>
                             </a>
+                            <div class = "search" id="searchForm">
+                                <div class = "header__search">
+                                    <i class="fas fa-search position-absolute" id="searchIcon"></i>
+                                    <input type="text" class="form-control" placeholder="Gõ từ khóa" id="searchInput" style="width: 400px; height: 50px;">
+                                </div>
+                                <button type="button" class="btn ml-5 border button"> Tìm kiếm </button>
+                            </div>
                         </li>
                         <li>
                             <a href="">
@@ -199,7 +201,7 @@
                             </a>
                         </li>
                    </ul>
-                  </div>
+                </div>
             </header>
            <div class="header-bottom-line d-flex justify-content-between pt-5">
             <hr style="width: 25%; height: 10px;">
@@ -688,5 +690,6 @@
     
 
     <script src="../js/homeProductItem.js"></script>
+    <script src="../js/search.js"></script>
 </body>
 </html>
