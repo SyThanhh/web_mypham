@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Đăng nhập</title>
+    <link rel="shortcut icon" href="../image/logo-header/shortcut-icon.jpg" type="image/png">
     <!-- Bootstrap-->
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
     <script src="../lib/swiper-bundle-js.min.js"></script>
     
-    <link rel="stylesheet" href="../css/signin.css">
+    <!-- Các thẻ css-->
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/carousel.css">
@@ -25,22 +25,23 @@
     <link rel="stylesheet" href="../css/homeProductItem.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/megamenu.css">
-
+    <link rel="stylesheet" href="../css/signin.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/member.css">
+    
 </head>
 <body>
     <div class="login-container">
-        <!--Header -->
         <header>
             <div class="logo">
-                <a href="index.html">
-                    <img src="../image/logo-header/logo.svg" title="" alt="logo" width="122" height="33">
-                   </a>
+                <img src="../image/logo-header/logo.svg" title="" alt="logo" width="122" height="33">
             </div>
             <input type="checkbox" id="nav_check" hidden>
             <nav class="navigation">
                 <ul>
-                    <li>
-                        <a class = "pos" href="">VỀ LANEIGE</a>
+                    <li id = "one">
+                        <a class = "pos" href="../html/index.html">VỀ LANEIGE</a>
                         <div class="mega-menu">
                             <div class="mega-menu-items">
                                 <ul>
@@ -52,8 +53,9 @@
                         </div>
                         
                     </li>
-                    <li>
-                        <a class= "pos" href="">CHĂM SÓC DA</a>
+
+                    <li class = "pos">
+                        <a href="../html/tatcasanpham_dm.html">CHĂM SÓC DA</a>
                         <div class="mega-menu2">
                             <div class="mega-menu2-items">
                                 <a class="mega-menu2-items-all" href="#">Tất cả</a>
@@ -61,43 +63,29 @@
                                     <li>
                                         <ul class="mega-menu2-items-sub">
                                             <li><a class = "mega-menu2-items-list" href="#">Danh mục</a></li>
-                                            <li><a href="#">Tất cả sản phẩm</a></li>
-                                            <li><a href="#">Tẩy trang</a></li>
-                                            <li><a href="#">Kem chống nắng</a></li>
-                                            <li><a href="#">Sửa rửa mặt</a></li>
-                                            <li><a href="#">Nước cân bằng</a></li>
-                                            <li><a href="#">Sữa dưỡng</a></li>
-                                            <li><a href="#">Tinh chất</a></li>
-                                            <li><a href="#">Kem dưỡng</a></li>
-                                            <li><a href="#">Mặt nạ</a></li>
-                                            <li><a href="#">Dưỡng mắt</a></li>
-                                            <li><a href="#">Dưỡng môi</a></li>
+                                            <li><a href="tatcasanpham_dm.html">Tất cả sản phẩm</a></li>
+                                            <li><a href="kemchongnang.html">Kem chống nắng</a></li>
+                                            <li><a href="suaruamat.html">Sửa rửa mặt</a></li>
+                                            <li><a href="kemduong.html">Kem dưỡng</a></li>
                                         </ul>
                                     </li>
 
                                     <li>
                                         <ul class="mega-menu2-items-sub">
                                             <li><a class = "mega-menu2-items-list" href="#">Nhu cầu da</a></li>
-                                            <li><a href="">Tất cả sản phẩm</a></li>
-                                            <li><a href="">Làm sạch</a></li>
-                                            <li><a href="">Retinol</a></li>
-                                            <li><a href="">Vitamin C</a></li>
-                                            <li><a href="">Dưỡng ẩm</a></li>
-                                            <li><a href="">Ngăn ngừa lão hóa</a></li>
-                                            <li><a href="">Dưỡng sáng mờ thâm</a></li>
-                                            <li><a href="">Phục hồi</a></li>
+                                            <li><a href="tatcasanpham_ncsp.html">Tất cả sản phẩm</a></li>
+                                            <li><a href="Retinol.html">Retinol</a></li>
+                                            <li><a href="VitaminC.html">Vitamin C</a></li>
+                                            <li><a href="phuchoi.html">Phục hồi</a></li>
                                         </ul>
                                     </li>
 
                                     <li>
                                         <ul class="mega-menu2-items-sub">
                                             <li><a class = "mega-menu2-items-list" href="#">Dòng sản phẩm</a></li>
-                                            <li><a href="">Tất cả sản phẩm</a></li>
-                                            <li><a href="">Perfect Renew</a></li>
-                                            <li><a href="">Water bank</a></li>
-                                            <li><a href="">Radian C</a></li>
-                                            <li><a href="">Sleeping Mask</a></li>
-                                            <li><a href="">Phyto Alexin</a></li>
+                                            <li><a href="tatcasanpham_ncsp.html">Tất cả sản phẩm</a></li>
+                                            <li><a href="../html/perfectRenew.html">Perfect Renew</a></li>
+                                            <li><a href="../html/sleepingMask.html">Sleeping Mask</a></li>
                                         </ul>
                                     </li>
 
@@ -121,8 +109,8 @@
                         </div>
                     </li>
 
-                    <li>
-                        <a class = "pos" href="">TRANG ĐIỂM</a>
+                    <li class = "pos">
+                        <a href="../html/tatcasanpham_makeup.html">TRANG ĐIỂM</a>
                         <div class="mega-menu2">
                             <div class="mega-menu2-items">
                                 <a class="mega-menu2-items-all" href="#">Tất cả</a>
@@ -136,11 +124,9 @@
                                     <li>
                                         <ul class="mega-menu2-items-sub">
                                             <li><a class = "mega-menu2-items-list" href="#">Trang điểm mặt</a></li>
-                                            <li><a href="#">Tất cả sản phẩm</a></li>
-                                            <li><a href="#">Kem lót</a></li>
-                                            <li><a href="#">Kem nền</a></li>
-                                            <li><a href="#">Phấn nước</a></li>
-                                            <li><a href="#">Phấn phủ</a></li>
+                                            <li><a href="../html/tatcasanpham_makeup.html">Tất cả sản phẩm</a></li>
+                                            <li><a href="../html/kemnen.html">Kem nền</a></li>
+                                            <li><a href="../html/phannuoc.html">Phấn nước</a></li>
                                         </ul>
                                     </li>
 
@@ -163,13 +149,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="">THÀNH VIÊN THỰC HIỆN</a>
-                    </li>
-                    <li>
-                        <a href="">SỰ KIỆN </a>
-                    </li>
-                    <li>
-                        <a href="">LIÊN HỆ</a>
+                        <a href="../html/member.html">THÀNH VIÊN THỰC HIỆN</a>
                     </li>
                 </ul>
             </nav>
@@ -190,10 +170,17 @@
                             <i class="fas fa-map-pin"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="">
-                            <i class="fas fa-search"></i>
+                    <li class="search_modal">
+                        <a href="#">
+                            <i class="fas fa-search" id="Icon" onclick="opensearch()"></i>
                         </a>
+                        <div class = "search" id="searchForm">
+                            <div class = "header__search">
+                                <i class="fas fa-search position-absolute" id="searchIcon"></i>
+                                <input type="text" class="form-control" placeholder="Gõ từ khóa" id="searchInput" style="width: 400px; height: 50px;">
+                            </div>
+                            <button type="button" class="btn ml-5 border button"> Tìm kiếm </button>
+                        </div>
                     </li>
                     <li>
                         <a href="">
@@ -202,7 +189,6 @@
                     </li>
                </ul>
             </div>
-
         </header>
 
         <div class="header-bottom-line d-flex justify-content-between pt-5">
@@ -339,5 +325,6 @@
 
     <script src="../js/homeProductItem.js"></script>
     <script src="../js/search.js"></script>
+    <script src="../js/kemNen.js"></script>
 </body>
 </html>
