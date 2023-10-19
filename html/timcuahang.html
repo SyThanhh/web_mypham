@@ -30,11 +30,12 @@
     <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/chiTietSanPham.css">
     <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/timcuahang.css">
 
 </head>
 
 <body>
-    <div>
+    <div >
         <!--Header -->
         <header>
             <div class="logo">
@@ -169,7 +170,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="../html/timcuahang.html">
                             <i class="fas fa-map-pin"></i>
                         </a>
                     </li>
@@ -200,19 +201,114 @@
        </div>
 
        <div class="link d-flex" style="margin-left: 50px; font-size: 18px; padding-top: 100px;">
-            <a class="text-dark" style="margin-right: 10px;" href="../html/index.html">Trang chủ</a>
-            <a class="text-dark" style="margin-right: 10px;" href="#"> > </a>
+            <a class="text-dark" style="margin-right: 10px;" href="../html/index.html"></a>
+            <a class="text-dark" style="margin-right: 10px;" href="#">  </a>
             <a class="text-dark" href="#">
                 <b>
-                    Tìm cửa hàng
+                    
                 </b>
             </a>
         </div>
 
-       <div class="container">
-
+       <div class="container mt-5">
+            <div class="row">
+                <div class="d-flex justify-content-around">
+                    <div class="col-4">
+                        <h1 class="mb-5">TÌM CỬA HÀNG</h1>
+                        <div class="form-group mb-3">
+                            <input type="text" placeholder="Nhập địa chỉ hoặc tên cửa hàng" style="width: 90%; height: 37px; padding-left: 10px;">
+                            <i class="fa fa-search p-2 bg-dark text-white" style="font-size: 20px;"></i>
+                        </div>
+    
+                        <div class="row stores-result mb-2 ">
+                            <h3 class="pc">Total <strong>5</strong> Articals Found</h3>
+                        </div>
+    
+                        <div class="store-list">
+                           <ul class = "stores-listing-ul store-lists items" id="content" style="height: 500px; overflow-y:scroll; padding-right: 5px;">
+                            <li class="store-list" onclick="pushmarker(0)" store-expand="Laneige Aeon Mall Hà Đông0" id="0">
+                                <div class="store-info">
+                                    <div class="store-primary-info">
+                                        <div class="store-info-top">
+                                            <strong class="store-title">Laneige Aeon Mall Hà Đông</strong>
+                                        </div>
+                                        <p class="address">Tầng Trệt, Aeon Hà Đông, khu dân cư Hoàng Văn Thu, Dương Nội, Hà Đông, Hà Nội</p> 
+                                        <p class="telephone">Điện thoại: 024-6296-5818</p>
+                                    </div>
+                                    <div class="store-secondary-info" style="display: none;"> </div>
+                                </div>
+                                <div class="inner-store" style="display: none;"></div>
+                            </li>
+                            <li class="store-list" onclick="pushmarker(1)" store-expand="Laneige Aeon Mall Hà Đông0" id="0">
+                                <div class="store-info">
+                                    <div class="store-primary-info">
+                                        <div class="store-info-top">
+                                            <strong class="store-title">Laneige Vincom Landmark 81</strong>
+                                        </div>
+                                        <p class="address">Tầng trệt Vincom Landmark 81, 208 Nguyễn Hữu Cảnh, Phường 22, Quận Bình Thạnh, Hồ Chí Minh, Việt Nam.</p> 
+                                        <p class="telephone">Điện thoại: 028-6275-2736</p>
+                                    </div>
+                                    <div class="store-secondary-info" style="display: none;"> </div>
+                                </div>
+                                <div class="inner-store" style="display: none;"></div>
+                            </li>
+    
+                            <li class="store-list" onclick="pushmarker(2)" store-expand="Laneige Aeon Mall Hà Đông0" id="0">
+                                <div class="store-info">
+                                    <div class="store-primary-info">
+                                        <div class="store-info-top">
+                                            <strong class="store-title">HASAKI 444 PHAN VĂN TRỊ</strong>
+                                        </div>
+                                        <p class="address">447 Phan Văn Trị, Phường 5, Quận Gò vấp</p> 
+                                        <p class="telephone">Điện thoại: 1800 6324</p>
+                                    </div>
+                                    <div class="store-secondary-info" style="display: none;"> </div>
+                                </div>
+                                <div class="inner-store" style="display: none;"></div>
+                            </li>
+    
+                            <li class="store-list" onclick="pushmarker(3)" store-expand="Laneige Aeon Mall Hà Đông0" id="0">
+                                <div class="store-info">
+                                    <div class="store-primary-info">
+                                        <div class="store-info-top">
+                                            <strong class="store-title">Laneige Vũng Tàu</strong>
+                                        </div>
+                                        <p class="address">24A Nguyễn Tri Phương, Phường 7, Thành phố Vũng Tàu, Bà Rịa - Vũng Tàu</p> 
+                                        <p class="telephone">Điện thoại: 097-7231-328</p>
+                                    </div>
+                                    <div class="store-secondary-info" style="display: none;"> </div>
+                                </div>
+                                <div class="inner-store" style="display: none;"></div>
+                            </li>
+    
+                            <li class="store-list" onclick="pushmarker(4)" store-expand="Laneige Aeon Mall Hà Đông0" id="0">
+                                <div class="store-info">
+                                    <div class="store-primary-info">
+                                        <div class="store-info-top">
+                                            <strong class="store-title">Laneige Aeon Mall Tân Phú Celadon</strong>
+                                        </div>
+                                        <p class="address">30 Bờ Bao Tân Thắng, Sơn Ký, Tân Phú, Hồ Chí Minh, Việt Nam</p> 
+                                        <p class="telephone">Điện thoại: 028-6275-7980</p>
+                                    </div>
+                                    <div class="store-secondary-info" style="display: none;"> </div>
+                                </div>
+                                <div class="inner-store" style="display: none;"></div>
+                            </li>
+                           </ul>
+                        </div>
+                    </div>
+                    <div class="col-8" style="margin-bottom: 100px;">
+                        <div class="desktop-map_container">
+                            <div class="stores-content store_map_right">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.0581362801086!2d105.74844037486137!3d20.99030658064937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31345313a2ec3449%3A0x3996bb747c79995!2sLANEIGE!5e0!3m2!1svi!2s!4v1697693728050!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
        </div>
        
+       <hr>
          <!-- Footer-->
          <footer>
             <div class="container">
