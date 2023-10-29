@@ -10,7 +10,11 @@
     background-size: cover;
     width: 500px;
 }
-
+.carousel-inner img {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+}
 .beautiful .carousel-controls{
     position: absolute;
     left: 57%;
