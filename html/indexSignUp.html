@@ -213,167 +213,196 @@
 
         <!--Sign Up form-->
         <div class="signup-form pt-5">
-            <div class="signup-form__header">
-                <h2 class="signup-form__heading">TẠO TÀI KHOẢN</h2>
+            <div class="row">
+                <h1 class="text-center">TẠO TÀI KHOẢN</h1>
             </div>
-    
-            <div class="signup-form__form">
-                <div class="signup-form__group">
-                    <label for="firstname" class="label">
-                        <span>Họ
-                            <sup>*</sup>
+            <form action="">
+                <div class="row m-2 p-2">
+                    <label for="txtHoten" class="col-md-4 text-right">
+                        <span>
+                            <b>Họ tên </b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-                    <div class="control">
-                       <input type="text" class="signup-form__input" placeholder="Họ"> 
-                    </div>
-                    
-                </div>
-                <div class="signup-form__group">
-                    <label for="lastname" class="label">
-                        <span>Tên
-                            <sup>*</sup>
-                        </span>
-                    </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Tên">
+                    <div class="row-md-8">
+                        <input type="text" id="txtHoten" class="form-control bordered border-dark" required>
+                        <span id="errHoten" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="mail" class="label">
-                        <span>Email
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtHoten" class="col-md-4 text-right">
+                        <span>
+                            <b>Email</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Email">
-                    </div>
-                </div>
-    
-    
-                <div class="signup-form__group">
-                    <label for="password" class="label">
-                        <span>Mật khẩu
-                            <sup>*</sup>
-                        </span>
-                    </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Mật khẩu">
+                    <div class="row-md-8">
+                        <input type="email" id="txtMail" class="form-control bordered border-dark" required>
+                        <span id="errMail" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="password" class="label">
-                        <span>Xác nhận mật khẩu
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtHoten" class="col-md-4 text-right">
+                        <span>
+                            <b>Mật khẩu</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Xác nhận mật khẩu">
-                    </div>
-                </div>
-    
-                <div class="signup-form__group">
-                    <label for="telephone" class="label">
-                        <span>Số điện thoại di động
-                            <sup>*</sup>
-                        </span>
-                    </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Số điện thoại">
+                    <div class="row-md-8">
+                        <input type="password" id="txtPwd" class="form-control bordered border-dark" required>
+                        <span id="errPwd" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="sex" class="label">
-                        <span>Giới tính
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtHoten" class="col-md-4 text-right">
+                        <span>
+                            <b>Xác nhận mật khẩu</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control_check">
-                        <input type="radio" class="signup-form__input mr-2" name="sex" value="male">Nam
-                        <input type="radio" class="signup-form__input" name="sex" value="female">Nữ
+                    <div class="row-md-8">
+                        <input type="password" id="txtRePwd" class="form-control bordered border-dark" required>
+                        <span id="errRePwd" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="telephone" class="label">
-                        <span>Tỉnh/Thành phố
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtHoten" class="col-md-4 text-right">
+                        <span>
+                            <b>Số điện thoại</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Chọn tỉnh/Thành phố">
+                    <div class="row-md-8">
+                        <input type="text" id="txtPhone" class="form-control bordered border-dark" required>
+                        <span id="errPhone" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="telephone" class="label">
-                        <span>Quận/Huyện
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label class="col-md-4 text-right">
+                        <span>
+                            <b>Giới tính</b>
+                            <sup class="text-danger">*</sup>
                         </span>
-                    </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Chọn quận/Huyện">
+                     </label>
+                    <div class="col-md-8">
+                        <input type="radio" id="rdoNam" name="rdoGioitinh" checked>
+                        <label for="rdoNam">Nam</label>
+                        <input type="radio" id="rdoNu" name="rdoGioitinh" class="ml-3">
+                        <label for="rdoNu">Nu</label>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="telephone" class="label">
-                        <span>Xã/Phường
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtTinh" class="col-md-4 text-right">
+                        <span>
+                            <b>Tỉnh/Thành phố</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Chọn phường/xã">
+                    <div class="row-md-8">
+                        <input type="text" id="txtTinh" class="form-control bordered border-dark" required>
+                        <span id="errTinh" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="telephone" class="label">
-                        <span>Địa chỉ chi tiết
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtHuyen" class="col-md-4 text-right">
+                        <span>
+                            <b>Quận/Huyện</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Địa chỉ chi tiết">
+                    <div class="row-md-8">
+                        <input type="text" id="txtHuyen" class="form-control bordered border-dark" required>
+                        <span id="errHuyen" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <label for="telephone" class="label">
-                        <span>Mã bưu chính
-                            <sup>*</sup>
+                <div class="row m-2 p-2">
+                    <label for="txtXa" class="col-md-4 text-right">
+                        <span>
+                            <b>Xã/Phường</b>
+                            <sup class="text-danger">*</sup>
                         </span>
                     </label>
-    
-                    <div class="control">
-                        <input type="text" class="signup-form__input" placeholder="Mã bưu chính">
+                    <div class="row-md-8">
+                        <input type="text" id="txtXa" class="form-control bordered border-dark" required>
+                        <span id="errXa" class="text-danger font-italic"></span>
                     </div>
                 </div>
 
-                <div class="signup-form__group">
-                    <input type="checkbox" class="signup-form__input" name="sex" value="male">Tôi đồng ý với <a href="">Điều khoản và dịch vụ</a>
+                <div class="row m-2 p-2">
+                    <label for="txtDiaChi" class="col-md-4 text-right">
+                        <span>
+                            <b>Địa chỉ chi tiết</b>
+                            <sup class="text-danger">*</sup>
+                        </span>
+                    </label>
+                    <div class="row-md-8">
+                        <input type="text" id="txtDiaChi" class="form-control bordered border-dark" required>
+                        <span id="errDiaChi" class="text-danger font-italic"></span>
+                    </div>
                 </div>
-    
-                <div class="signup-form__confirm">
-                    <a href="../html/indexSignIn.html">
-                        <button class="confirm">TẠO TÀI KHOẢN</button>
-                    </a>
+
+                <div class="row m-2 p-2">
+                    <label for="txtBuu" class="col-md-4 text-right">
+                        <span>
+                            <b>Mã bưu chính</b>
+                            <sup class="text-danger">*</sup>
+                        </span>
+                    </label>
+                    <div class="row-md-8">
+                        <input type="text" id="txtBuu" class="form-control bordered border-dark" required>
+                        <span id="errBuu" class="text-danger font-italic"></span>
+                    </div>
                 </div>
-            </div>
+
+                <div class="row m-2 p-2">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="txtChk" required>
+                        <label class="custom-control-label" for="txtChk">
+                            Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a>
+                        </label>
+                    </div>
+                    <span id="errChk" class="text-danger font-italic"></span>
+                </div>
+                
+                <div class="row justify-content-center p-5">
+                    <button type="button" id="createAcc" class="btn btn-primary" data-toggle="modal fade" data-target="#myModal" onclick="taoTaiKhoan()" style="width: 50%; height: 70px;">TẠO TÀI KHOẢN</button>
+                </div>
+            </form>
         </div>  
+
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog">
+            <div class="modal-content">
+            
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4></h4>
+                <button type="button" class="close justify-content-end" id="closeModal" data-dismiss="modal" style="border: none; background-color: white;">&times;</button>
+                </div>
+                
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <p class="text-center align-items-center" style="font-size: 18px; font-weight: 600;">Tạo tài khoản thành công!</p>
+                </div>
+                
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-danger" id="closeModalButton" data-dismiss="modal">Close</button>
+                </div>
+                
+            </div>
+            </div>
+        </div>
 
         <hr style="height: 2px;">
 
@@ -438,5 +467,6 @@
     <script src="../js/homeProductItem.js"></script>
     <script src="../js/search.js"></script>
     <script src="../js/kemNen.js"></script>
+    <script src="../js/signupRegex.js"></script>
 </body>
 </html>
