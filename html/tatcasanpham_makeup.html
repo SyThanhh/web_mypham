@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/member.css">
     <link rel="stylesheet" href="../css/timcuahang.css">
-   
+    <link rel="stylesheet" href="../css/carts.css">
 </head>
 <body>
     <div class="app">
@@ -185,9 +185,33 @@
                         </div>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="cart-icon" href="#">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
+
+                        <div class="cart-info">
+                            <h2 class="cart-title">
+                                Giỏ hàng
+                            </h2>
+
+                            <div class="cart-contents">
+                                <div class="cart-items">
+                                    
+                                </div>
+                            </div>
+
+                            <!--Total-->
+                            <div class="total">
+                                <div class="total-title">Tổng tiền:</div>
+                                <div class="total-price">0đ</div>
+                            </div>
+
+                            <!--Buy button-->
+                            <button type="button" class="btn-buy">Thanh toán</button>
+
+                            <!--Cart Close-->
+                            <i class="fas fa-times" id="close-cart"></i>
+                        </div>
                     </li>
                </ul>
             </div>
@@ -297,7 +321,9 @@
                               </div>
                               <div class="products-detail">
                                   <div class="product-name">
-                                      <span>Kem Nền Mịn Lì 48H Laneige Neo Foundation Matte 30m</span>
+                                    <a href="../html/kemnen_chitietsp.html">
+                                        <span>Kem Nền Mịn Lì 48H Laneige Neo Foundation Matte 30m</span>
+                                    </a>
                                   </div>
                                   <div class="product-price have-discount-label">
                                       <span class="discount-label">10%</span>
@@ -327,7 +353,9 @@
                               </div>
                               <div class="products-detail">
                                   <div class="product-name">
-                                      <span>Phấn Nước Cho Lớp Nền Căng Bóng Tự Nhiên Laneige Neo Cushion Glow 15g*2</span>
+                                    <a href="../html/phannuoc_chitietsp.html">
+                                        <span>Phấn Nước Cho Lớp Nền Căng Bóng Tự Nhiên Laneige Neo Cushion Glow 15g*2</span>
+                                    </a>
                                   </div>
                                   <div class="product-price have-discount-label">
                                       <span class="price-current">1.575.000 ₫</span>
@@ -409,5 +437,7 @@
     <script src="../js/homeProductItem.js"></script>
     <script src="../js/search.js"></script>
     <script src="../js/kemNen.js"></script>
+    <script src="../js/signupRegex.js"></script>
+    <script src="../js/addToCart.js"></script>
 </body>
 </html>
