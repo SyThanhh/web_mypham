@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../css/chiTietSanPham.css">
     <link rel="stylesheet" href="../css/member.css">
     <link rel="stylesheet" href="../css/timcuahang.css">
+    <link rel="stylesheet" href="../css/carts.css">
 
 </head>
 
@@ -187,9 +188,33 @@
                         </div>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="cart-icon" href="#">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
+
+                        <div class="cart-info">
+                            <h2 class="cart-title">
+                                Giỏ hàng
+                            </h2>
+
+                            <div class="cart-contents">
+                                <div class="cart-items">
+                                    
+                                </div>
+                            </div>
+
+                            <!--Total-->
+                            <div class="total">
+                                <div class="total-title">Tổng tiền:</div>
+                                <div class="total-price">0đ</div>
+                            </div>
+
+                            <!--Buy button-->
+                            <button type="button" class="btn-buy">Thanh toán</button>
+
+                            <!--Cart Close-->
+                            <i class="fas fa-times" id="close-cart"></i>
+                        </div>
                     </li>
                </ul>
             </div>
@@ -208,7 +233,7 @@
        
 
         <!--Content-->
-        <div class="row m-0 d-flex justify-content-around text-align-center" style="padding-top: 70px;">
+        <div class="row m-0 d-flex justify-content-around text-align-center" style="padding-top: 70px;" data-id="4">
             <div class="col-6 beautiful">
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                     <!-- Indicators -->
@@ -238,7 +263,7 @@
                     <!-- The slideshow -->
                     <div class="carousel-inner">
                         <div class="carousel-item active" >
-                            <img src="../image/makeup/matNaNgu_01.jpg" alt="">
+                            <img src="../image/makeup/matNaNgu_01.jpg" class="product-img" alt="">
                         </div>
 
                         <div class="carousel-item" >
@@ -254,7 +279,7 @@
             </div>
 
             <div class="col-5" style="margin-right: 120px;">
-                <h4 class="mb-3">[Phiên bản giới hạn] Mặt Nạ Ngủ Dưỡng Môi Laneige Lip Sleeping Mask EX Pink Lemon Swirl 20g</h4>
+                <h4 class="mb-3 pro-name">[Phiên bản giới hạn] Mặt Nạ Ngủ Dưỡng Môi Laneige Lip Sleeping Mask EX Pink Lemon Swirl 20g</h4>
                 <h5 class="text-primary mb-3">Laneige Lip Sleeping Mask EX Pink Lemonade Swirl 20g</h5>
                 <div class="d-flex align-items-center mb-4">
                     <i class="fas fa-star"></i>
@@ -808,5 +833,6 @@
     <script src="../js/search.js"></script>
     <script src="../js/kemNen.js"></script>
     <script src="../js/signupRegex.js"></script>
+    <script src="../js/addToCart.js"></script>
 </body>
 </html>

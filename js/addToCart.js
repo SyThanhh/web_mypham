@@ -13,105 +13,145 @@ cartClose.addEventListener("click", function () {
     cart.classList.remove("active");
 });
 
-//Cart working
-if(document.readyState == 'loading'){
-    document.addEventListener('DOMContentLoaded', ready)  
-}else{
-    ready()
+class CartItem{
+    constructor(name, img, price){
+        this.name = name;
+        this.img=img;
+        this.price = price;
+        this.quantity = 1;
+   }
 }
 
-//Making function ready
-function ready(){
-  //Remove item from cart
-  var removeCartButtons = document.getElementsByClassName("cart-remove");
- // console.log(removeCartButtons);
-  for(var i=0; i<removeCartButtons.length; i++){
-    var button = removeCartButtons[i];
-    button.addEventListener("click", removeCartItem);
-  }
-  //Quantity changes
-  var quantityInputs = document.getElementsByClassName("cart-item-quantity");
-  for(var i=0; i<quantityInputs.length; i++){
-    var input = quantityInputs[i];
-    input.addEventListener("change", quantityChanged);
-  }
+class LocalCart{
+    static key = "cartItems";
 
-  //Add to cart
-    var addToCart = document.getElementsByClassName("tocart");
-    for(var i=0; i<addToCart.length; i++){
-      var button = addToCart[i];
-      button.addEventListener("click", addToCartClicked);
-      }
+    static getLocalCartItems(){
+        let cartMap = new Map()
+        const cart = localStorage.getItem(LocalCart.key)   
+        if(cart===null || cart.length===0)  return cartMap
+            return new Map(Object.entries(JSON.parse(cart)))
+    }
+
+    static addItemToLocalCart(id, item){
+        let cart = LocalCart.getLocalCartItems()
+        if(cart.has(id)){
+            let mapItem = cart.get(id)
+            mapItem.quantity +=1
+            cart.set(id, mapItem)
+        }
+        else{
+            cart.set(id, item)
+        }
+       localStorage.setItem(LocalCart.key, JSON.stringify(Object.fromEntries(cart)))
+       updateCartUI()
+        
+    }
+
+    static removeItemFromCart(id){
+        let cart = LocalCart.getLocalCartItems()
+        if(cart.has(id)){
+            let mapItem = cart.get(id)
+            if(mapItem.quantity>1){
+                mapItem.quantity -=1
+                cart.set(id, mapItem)
+        }else{
+                cart.delete(id)
+        }
+        
+        } 
+        if (cart.length===0){
+            localStorage.clear()
+        }
+        
+        else{
+            localStorage.setItem(LocalCart.key,  JSON.stringify(Object.fromEntries(cart)))
+            updateCartUI()
+        }        
+    }
 }
 
 
-//Remove item from cart
-function removeCartItem(event) {
-  var buttonClicked = event.target;
-  buttonClicked.parentElement.parentElement.remove();
+const cartIconElement = document.querySelector('.cart-icon');
+const wholeCartWindow = document.querySelector('.cart-info');
+wholeCartWindow.inWindow = 0;
+const addToCartBtns = document.querySelectorAll('.tocart');
+addToCartBtns.forEach( (btn)=>{
+    btn.addEventListener('click', addItemFunction)
+}  )
+
+function addItemFunction(e){
+    const productContainer = e.target.closest('.row[data-id]');
+    const id = productContainer.getAttribute("data-id");
+    const img = productContainer.querySelector('.product-img').src;
+    const name = productContainer.querySelector('.pro-name').textContent;
+    let price = productContainer.querySelector('.price').textContent;
+    price = price.replace("₫", '').trim(); // Adjust this according to your actual HTML structure
+    const item = new CartItem(name, img, price);
+    LocalCart.addItemToLocalCart(id, item);
+    updateCartUI();
 }
 
-//Quantity changes
-function quantityChanged(event){
-  var input = event.target;
-  if(isNaN(input.value) || input.value <= 0){
-    input.value = 1;
-  }
+
+cartIconElement.addEventListener('mouseover', ()=>{
+if(wholeCartWindow.classList.contains('hide'))
+wholeCartWindow.classList.remove('hide')
+})
+
+cartIconElement.addEventListener('mouseleave', ()=>{
+    // if(wholeCartWindow.classList.contains('hide'))
+    setTimeout( () =>{
+        if(wholeCartWindow.inWindow===0){
+            wholeCartWindow.classList.add('hide')
+        }
+    } ,500 )
+    
+    })
+
+ wholeCartWindow.addEventListener('mouseover', ()=>{
+     wholeCartWindow.inWindow=1
+ })  
+ 
+ wholeCartWindow.addEventListener('mouseleave', ()=>{
+    wholeCartWindow.inWindow=0
+    wholeCartWindow.classList.add('hide')
+})  
+ 
+
+function updateCartUI(){
+    const cartWrapper = document.querySelector('.cart-contents');
+    cartWrapper.innerHTML = "";
+    const items = LocalCart.getLocalCartItems();
+    if (items === null) return;
+    for (const [key, value] of items.entries()) {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-items');
+        cartItem.innerHTML =
+            `
+        <div class="cart-item-image">
+            <a href="../html/kemnen_chitietsp.html">
+                <img class="cart-img" src="${value.img}" alt="">
+            </a>
+        </div>
+        <div class="cart-item-info">
+            <div class="cart-item-name">
+                <span>${value.name}</span>
+            </div>
+            <div class="cart-item-price">
+                <span>Đơn giá: ${value.price}đ</span>
+                <br>
+                <span class="cart-item-quantity" style="font-size: 17px; font-weight: 600;">SL: ${value.quantity}</span>
+            </div>
+            
+        </div>
+        <!--Remove item-->
+        <i class="fas fa-trash cart-remove"></i>`;
+        
+       cartItem.lastElementChild.addEventListener('click', ()=>{
+           LocalCart.removeItemFromCart(key);
+       })
+        cartWrapper.append(cartItem);
+    }
+
 }
-
-//Add to cart clicked
-function addToCartClicked(event){
-   var button = event.target;
-   var shopItem = button.parentElement;
-   var title = shopItem.getElementsByClassName("product-name")[0].innerText;
-   console.log(title);
-   var price = shopItem.getElementsByClassName("price")[0].innerText;
-   var imageSrc = shopItem.getElementsByClassName("product-img")[0].src;
-   addItemToCart(title, price, imageSrc);
-  
-}
-
-//Add item to cart
-// function addItemToCart(title, price, imageSrc){
-//   var cartRow = document.createElement("div");
-//   cartRow.classList.add("cart-items"); //cart-
-//   var cartItems = document.getElementsByClassName("cart-contents")[0];
-//   var cartItemNames = cartItems.getElementsByClassName("cart-item-name");
-//   for(var i=0; i<cartItemNames.length; i++){
-//     if(cartItemNames[i].innerText == title){
-//       alert("This item is already added to the cart");
-//       return;
-//     }
-//   }
-//   var cartRowContents = `
-//                         <div class="cart-item-image">
-//                             <a href="../html/kemnen_chitietsp.html">
-//                                 <img class="cart-img" src="${imageSrc}" alt="">
-//                             </a>
-//                         </div>
-//                         <div class="cart-item-info">
-//                             <div class="cart-item-name">
-//                                 <span>${title}</span>
-//                             </div>
-//                             <div class="cart-item-price">
-//                                 <span>${price}</span>
-//                             </div>
-
-//                             <input type="number" class="cart-item-quantity" value="1" style="font-size: 15px;">
-//                         </div>
-
-//                         <!--Remove item-->
-//                         <i class="fas fa-trash cart-remove"></i>
-//                       </div>`;
-//   cartRow.innerHTML = cartRowContents;
-//   cartItems.append(cartRow);
-//   cartRow.getElementsByClassName("cart-remove")[0].addEventListener("click", removeCartItem);
-//   cartRow.getElementsByClassName("cart-item-quantity")[0].addEventListener("change", quantityChanged);
-// }
-
-//Update cart total price 
-
-
-
-
-
+document.addEventListener('DOMContentLoaded', ()=>{updateCartUI()})
+    

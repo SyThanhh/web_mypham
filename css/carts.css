@@ -1,10 +1,12 @@
 .cart-info{
     width: 40%;
-    min-height: 200vh;
+    height: 100vh;
     right: -100%; 
-    background-color: white;
+    background-color: rgb(236, 242, 251);
     transition: 0.3s;
     position: fixed;
+    overflow: scroll;
+    margin-top: 5px;
 }
 
 .cart-info.active{
@@ -14,7 +16,7 @@
     text-align: center;
     font: 1.5rem;
     font-weight: 600;
-    margin: 2rem;
+    margin: 0.5rem;
     padding-left: 10px;
 }
 
@@ -44,15 +46,13 @@
 }
 
 .cart-item-price{
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .cart-item-quantity{
     width: 40px;
     text-align: center;
-    border: 2px solid rgb(100, 98, 98);
-    border-radius: 5px;
 
 }
 
@@ -61,7 +61,7 @@
 }
 
 .cart-remove{
-    color: red;
+    color: rgb(152, 130, 130);
     font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
@@ -100,6 +100,7 @@
     cursor: pointer;
     background-color: #3bc4ff;
     margin: 20px auto;
+    margin-bottom: 100px;
 }
 
 #close-cart{

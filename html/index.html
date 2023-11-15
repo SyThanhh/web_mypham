@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/member.css">
     <link rel="stylesheet" href="../css/timcuahang.css">
+    <link rel="stylesheet" href="../css/carts.css">
 
 </head>
 <body>
@@ -185,9 +186,33 @@
                         </div>
                     </li>
                     <li>
-                        <a href="">
+                        <a class="cart-icon" href="#">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
+
+                        <div class="cart-info">
+                            <h2 class="cart-title">
+                                Giỏ hàng
+                            </h2>
+
+                            <div class="cart-contents">
+                                <div class="cart-items">
+                                    
+                                </div>
+                            </div>
+
+                            <!--Total-->
+                            <div class="total">
+                                <div class="total-title">Tổng tiền:</div>
+                                <div class="total-price">0đ</div>
+                            </div>
+
+                            <!--Buy button-->
+                            <button type="button" class="btn-buy">Thanh toán</button>
+
+                            <!--Cart Close-->
+                            <i class="fas fa-times" id="close-cart"></i>
+                        </div>
                     </li>
                </ul>
             </div>
@@ -765,5 +790,6 @@
     <script src="../js/search.js"></script>
     <script src="../js/kemNen.js"></script>
     <script src="../js/signupRegex.js"></script>
+    <script src="../js/addToCart.js"></script>
 </body>
 </html>
