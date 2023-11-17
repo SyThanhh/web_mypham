@@ -52,13 +52,12 @@ function queryInfoProduct(element) {
                 'priceOld' : priceOld,
                 'priceCurrent' : priceCurrent 
             };
-            saveLocalStorage()
+            saveLocalStorage();
         }
 }
 
 function getInfoProductPutIntoPage() {
-    const info = getLocalStorage()
-    
+    const info = getLocalStorage();
     const carouselInner = document.querySelector('.carousel-inner');
     const carouselItemActive = document.querySelector('.carousel-item.active');
     const imageU = carouselItemActive.querySelector('img');
