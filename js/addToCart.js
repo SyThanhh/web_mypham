@@ -88,8 +88,10 @@ addToCartBtns.forEach( (btn)=>{
 
 //Thêm sản phẩm vào giỏ hàng
 function addItemFunction(e){
+    
     //Lấy id của sản phẩm
     const productContainer = e.target.closest('.row[data-id]');
+    // console.log(productContainer)
     const id = productContainer.getAttribute("data-id");
     const img = productContainer.querySelector('.product-img').src;
     const name = productContainer.querySelector('.pro-name').textContent;
