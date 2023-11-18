@@ -2,6 +2,7 @@ let $ = document.querySelector.bind(document)
 let $$ = document.querySelectorAll.bind(document)
 
 
+
 const card = $('.card')
 const image = $$('.image')
 const iconCart = $$('.btn-cart-product')
@@ -14,13 +15,39 @@ function handelDetailsProducts() {
 }
 handelDetailsProducts()
 
+
+function generateRandomUniqueNumbers(count) {
+    if (count > 100) {
+      
+        return [];
+    }
+
+    let uniqueNumbers = [];
+    let randomNumber;
+
+    for (let i = 0; i < count; i++) {
+        do {
+            randomNumber = Math.floor(Math.random() * 100) + 1;
+        } while (uniqueNumbers.includes(randomNumber));
+
+        uniqueNumbers.push(randomNumber);
+    }
+
+    return uniqueNumbers;
+}
+
+// Sử dụng hàm để sinh ra 10 số ngẫu nhiên không trùng lặp
+var randomNumbers = generateRandomUniqueNumbers(10);
+
+
+
 // Lấy tất cả các nút mua hàng
 const buttons = $$(".btn-cart-product");
-buttons.forEach((button, index) => {
+buttons.forEach((button) => {
    
     button.addEventListener("click", function() {
         // Lấy phần tử cha của nút, sau đó tìm phần tử img bên trong nó
-        queryInfoProduct(button, index)
+        queryInfoProduct(button)
     });
 });
 
@@ -29,7 +56,7 @@ function saveLocalStorage() {
     return localStorage.setItem('infoProduct', JSON.stringify(info))
 }
 
-function queryInfoProduct(element, index) {
+function queryInfoProduct(element)  {
     const cardElement = element.closest(".card");
         const imgElement = cardElement.querySelector(".img-fluid");
         const productName = cardElement.querySelector('.product-name').textContent.trim();
@@ -51,7 +78,7 @@ function queryInfoProduct(element, index) {
                 'discount' : discountLabel,
                 'priceOld' : priceOld,
                 'priceCurrent' : priceCurrent ,
-                'index' : index
+                'index' : randomNumbers[0]
             };
             saveLocalStorage();
         }
@@ -90,7 +117,7 @@ function getInfoProductPutIntoPage() {
 
 
     const addToCartBtns = document.querySelectorAll('.tocart');
-    addToCartBtns.forEach( (btn)=>{
+    addToCartBtns.forEach((btn)=>{
         btn.addEventListener('click', function(e) {
             const productContainer = e.target.closest('.row[data-id]');
             if (productContainer) {
@@ -108,3 +135,4 @@ getInfoProductPutIntoPage()
 function getLocalStorage() {
     return JSON.parse(localStorage.getItem('infoProduct')) ?? []
 }
+
