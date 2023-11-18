@@ -41,7 +41,9 @@
         <!--Header -->
         <header>
             <div class="logo">
-                <img src="../image/logo-header/logo.svg" title="" alt="logo" width="122" height="33">
+                <a href="../html/index.html">
+                    <img src="../image/logo-header/logo.svg" title="" alt="logo" width="122" height="33">
+                </a>
             </div>
             <input type="checkbox" id="nav_check" hidden>
             <nav class="navigation">
@@ -53,7 +55,7 @@
                                 <ul>
                                     <li><a href="#">Câu chuyện thương hiệu</a></li>
                                     <li><a href="#">Limited</a></li>
-                                    <li><a href="#">Tất cả sản phẩm</a></li>
+                                    <li><a href="../html/tatcasp_allweb.html">Tất cả sản phẩm</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -250,7 +252,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="text" id="txtHoten" class="form-control bordered border-dark" required >
+                        <input type="text" id="txtHoten" class="form-control bordered border-dark" required>
                         <span id="errHoten" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -263,7 +265,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="email" id="txtMail" class="form-control bordered border-dark" required >
+                        <input type="email" id="txtMail" class="form-control bordered border-dark" required>
                         <span id="errMail" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -276,7 +278,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="password" id="txtPwd" class="form-control bordered border-dark" required >
+                        <input type="password" id="txtPwd" class="form-control bordered border-dark" required>
                         <span id="errPwd" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -289,7 +291,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="password" id="txtRePwd" class="form-control bordered border-dark" required >
+                        <input type="password" id="txtRePwd" class="form-control bordered border-dark" required>
                         <span id="errRePwd" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -302,7 +304,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="text" id="txtPhone" class="form-control bordered border-dark" required >
+                        <input type="text" id="txtPhone" class="form-control bordered border-dark" required>
                         <span id="errPhone" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -330,7 +332,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="text" id="txtTinh" class="form-control bordered border-dark" required >
+                        <input type="text" id="txtTinh" class="form-control bordered border-dark" required>
                         <span id="errTinh" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -343,7 +345,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="text" id="txtHuyen" class="form-control bordered border-dark" required >
+                        <input type="text" id="txtHuyen" class="form-control bordered border-dark" required>
                         <span id="errHuyen" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -356,7 +358,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="text" id="txtXa" class="form-control bordered border-dark" required >
+                        <input type="text" id="txtXa" class="form-control bordered border-dark" required>
                         <span id="errXa" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -369,7 +371,7 @@
                         </span>
                     </label>
                     <div class="row-md-8">
-                        <input type="text" id="txtDiaChi" class="form-control bordered border-dark" required >
+                        <input type="text" id="txtDiaChi" class="form-control bordered border-dark" required>
                         <span id="errDiaChi" class="text-danger font-italic"></span>
                     </div>
                 </div>
@@ -389,7 +391,7 @@
 
                 <div class="row m-2 p-2">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="txtChk" required onchange="taoTaiKhoan()">
+                        <input type="checkbox" class="custom-control-input" id="txtChk" required>
                         <label class="custom-control-label" for="txtChk">
                             Tôi đồng ý với <a href="#">Điều khoản và dịch vụ</a>
                         </label>
@@ -398,7 +400,7 @@
                 </div>
                 
                 <div class="row justify-content-center p-5">
-                    <button type="button" id="createAcc" class="btn btn-primary" data-toggle="modal fade" data-target="#myModal" onclick="taoTaiKhoan()" style="width: 50%; height: 70px;">TẠO TÀI KHOẢN</button>
+                    <button type="button" id="createAcc" class="btn btn-primary" data-toggle="modal fade" data-target="#myModal" onclick="successRegister()" style="width: 50%; height: 70px;">TẠO TÀI KHOẢN</button>
                 </div>
             </form>
         </div>  
@@ -422,7 +424,9 @@
                 
                 <!-- Modal footer -->
                 <div class="modal-footer">
-                <button type="button" class="btn btn-danger" id="successModalButton" data-dismiss="modal">Close</button>
+                    <a href="../html/indexSignIn.html">
+                        <button type="button" class="btn btn-danger" id="successModalButton" data-dismiss="modal">Close</button>
+                    </a>
                 </div>
                 
             </div>

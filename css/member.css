@@ -6,28 +6,17 @@
     background-repeat: repeat;
 }
 
-.frame1{
-    width: 57%;
-    height: 440px;
-    border: 5px solid #4477BD;
+.member{
+    padding: 0;
+    border: 7px solid #79A3DC;
+    text-align: center;
+    border-radius: 16px;
 }
 
-.member1 img{
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}
-
-.member2{
-    margin-left: 600px;
-}
-.member2 img{
-    top: 5%;
-    left: 15%;
-}
-
-.frame2{
-    width: 95%;
-    height: 450px;
-    border: 5px solid rgb(121,163,220);
+.member img{
+    width: 100%;
+    height: 500px;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    border-bottom: 7px solid #79A3DC;
 }

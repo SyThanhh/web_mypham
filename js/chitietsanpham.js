@@ -1,8 +1,8 @@
 let $ = document.querySelector.bind(document)
 let $$ = document.querySelectorAll.bind(document)
+let info;
 
-
-const card = $('.card')
+const card = $$('.card')
 const image = $$('.image')
 const iconCart = $$('.btn-cart-product')
 function handelDetailsProducts() {
@@ -26,7 +26,7 @@ buttons.forEach(button => {
 
 
 function saveLocalStorage() {
-    return localStorage.setItem('infoProduct', JSON.stringify(info))
+    return localStorage.setItem('infoProduct', JSON.stringify(info));
 }
 
 function queryInfoProduct(element) {
@@ -45,7 +45,7 @@ function queryInfoProduct(element) {
             info = {
                 'imageU' : imageUrl,
                 'name' : productName,
-                'capacity':capacityProduct,
+                'capacity': capacityProduct,
                 'description' : productNameDetails,
                 'note' : productNameNote,
                 'discount' : discountLabel,
@@ -54,6 +54,7 @@ function queryInfoProduct(element) {
             };
             saveLocalStorage();
         }
+
 }
 
 function getInfoProductPutIntoPage() {
@@ -83,8 +84,8 @@ function getInfoProductPutIntoPage() {
     elementH4.textContent = info.name;
     elementH5.textContent = info.description;
     detailProductNote.textContent = info.note;
-    discount.textContent = info.discount;
-    priceOld.textContent = info.priceOld;
+    discount.textContent = info.discount;       
+    priceOld.textContent = info.priceOld;       
     priceCurrent.textContent = info.priceCurrent;
     capacityDetails.textContent = info.capacity;
 

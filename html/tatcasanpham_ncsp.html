@@ -38,7 +38,9 @@
             <!--Header -->
         <header>
             <div class="logo">
-                <img src="../image/logo-header/logo.svg" title="" alt="logo" width="122" height="33">
+                <a href="../html/index.html">
+                    <img src="../image/logo-header/logo.svg" title="" alt="logo" width="122" height="33">
+                </a>
             </div>
             <input type="checkbox" id="nav_check" hidden>
             <nav class="navigation">
@@ -50,7 +52,7 @@
                                 <ul>
                                     <li><a href="#">Câu chuyện thương hiệu</a></li>
                                     <li><a href="#">Limited</a></li>
-                                    <li><a href="#">Tất cả sản phẩm</a></li>
+                                    <li><a href="../html/tatcasp_allweb.html">Tất cả sản phẩm</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -379,13 +381,78 @@
             <div class="container">
                 <div class="products-all">
                     <div class="row">
+
+                        <div class="col-md-3">
+                            <div class="card" style="background-color: #ffffff; box-shadow: unset;">
+                                <div class="card-content">
+                                    <div class="flags flags-two-item">
+                                        <span class="new">New</span>
+                                    </div>
+                                    <div class="image">
+                                       <a href="../html/perfectRenew_chitietsp.html">
+                                           <img class="img-fluid" src="../image/makeup/perfectRenew_01.png" alt="">
+                                       </a>
+                                    </div>
+                                </div>
+                                <div class="products-detail">
+                                      <div class="product-name">
+                                        <span>
+                                            <a style="color: black;" href="../html/perfectRenew_chitietsp.html">Sữa Dưỡng Chống Lão Hóa Laneige Perfect Renew 3X Emulsion 130ml</a>
+                                        </span>
+                                      </div>
+                                      <div class="product-price have-discount-label">
+                                          <span class="discount-label">10%</span>
+                                          <span class="price-old">1.150.000 ₫</span>
+                                          <span class="price-current">1.035.000 ₫</span>
+                                      </div>
+                                </div>
+    
+                                <button class="btn position-absolute btn-cart-product">
+                                    <a href="../html/perfectRenew_chitietsp.html">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <div class="card" style="background-color: #ffffff; box-shadow: unset;">
+                                <div class="card-content">
+                                    <div class="flags flags-two-item flags-best-item">
+                                        <span class="best">best</span>
+                                    </div>
+                                    <div class="image">
+                                    <a href="../html/sleepingMask_chitietsp.html">
+                                        <img class="img-fluid" src="../image/makeup/matNaNgu_01.jpg" alt="">
+                                    </a>
+                                    </div>
+                                </div>
+                                <div class="products-detail">
+                                    <div class="product-name">
+                                        <span>
+                                            <a style="color: black;" href="../html/sleepingMask_chitietsp.html">[Phiên bản giới hạn] Mặt Nạ Ngủ Dưỡng Môi Laneige Lip Sleeping Mask EX Pink Lemon Swirl 20g</a>
+                                        </span>
+                                    </div>
+                                    <div class="product-price have-discount-label">
+                                        <span class="price-current">550.000 ₫</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn position-absolute btn-cart-product">
+                                    <a href="../html/sleepingMask_chitietsp.html">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </button>
+                            </div>
+                       </div>
+
                        <div class="col-md-3">
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item">
                                     <span class="new">New</span>
                                   </div>
-                                <div class="image">
+                                <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
                                        <img class="img-fluid" src="../image/products/tatcasanpham/1000-2.jpg" alt="">
                                    </a>
@@ -419,7 +486,7 @@
                             <div class="card-content">
                                 <div class="flags flags-two-item">
                                     <span class="new">New</span>
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
@@ -450,13 +517,15 @@
                               </button>
                           </div>
                        </div>
+
+                       <hr class="my-4">
                        
                        <div class="col-md-3">
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item">
                                     <span class="new">New</span>
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
@@ -493,7 +562,7 @@
                             <div class="card-content">
                                 <div class="flags flags-two-item">
                                     <span class="new">New</span>
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
@@ -525,14 +594,12 @@
                           </div>
                        </div>
 
-                       <hr class="my-4">
-
                        <div class="col-md-3">
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item">
                                     <span class="new">New</span>
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
@@ -569,7 +636,7 @@
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item flags-best-item">
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
@@ -601,13 +668,14 @@
                           </div>
                        </div>
 
+                       <hr class="my-4">
 
                        <div class="col-md-3">
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item">
                                     <span class="new">New</span>
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image" onclick="handelDetailsProducts()">
                                    <a href="chitietsanpham.html">
@@ -644,7 +712,7 @@
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item flags-best-item">
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image">
                                    <a href="chitietsanpham.html">
@@ -676,7 +744,7 @@
                           </div>
                        </div>
 
-                       <hr class="my-4">
+                       
                        <div class="col-md-3">
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
@@ -718,7 +786,7 @@
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item flags-best-item">
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image">
                                    <a href="chitietsanpham.html">
@@ -751,12 +819,13 @@
                           </div>
                        </div>
 
+                       <hr class="my-4">
 
                        <div class="col-md-3">
                         <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                             <div class="card-content">
                                 <div class="flags flags-two-item flags-best-item">
-                                    <span class="best">best</span>
+                                    <span class="best">Best</span>
                                   </div>
                                 <div class="image">
                                    <a href="chitietsanpham.html">
@@ -788,44 +857,122 @@
                           </div>
                        </div>
 
-
                        <div class="col-md-3">
-                        <div class="card" style="background-color: #ffffff; box-shadow: unset;">
-                            <div class="card-content">
-                                <div class="flags flags-two-item">
-                                    <span class="new">New</span>
-                                  </div>
-                                <div class="image" onclick="handelDetailsProducts()">
-                                   <a href="chitietsanpham.html">
-                                       <img class="img-fluid" src="../image/products/tatcasanpham/ln_wb_cleanser_model_09.png.webp" alt="">
-                                   </a>
+                            <div class="card" style="background-color: #ffffff; box-shadow: unset;">
+                                <div class="card-content">
+                                    <div class="flags flags-two-item">
+                                        <span class="new">New</span>
+                                    </div>
+                                    <div class="image">
+                                        <a href="chitietsanpham.html">
+                                            <img class="img-fluid" src="../image/products/kemduong/1_combo_tiet_kiem.webp" alt="">
+                                        </a>
+                                    </div>
                                 </div>
-                              </div>
-                              <div class="products-detail">
-                                  <div class="product-name">
-                                      <span>Kem Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Cream Dry 50ml </span>
-                                      <span class="capacity_product">50ml</span>
+
+                                <div class="products-detail">
+                                    <div class="product-name">
+                                        <span>Bộ Sản Phẩm Phục Hồi Dưỡng Ẩm Chuyên Sâu 2 Món Laneige Water Bank Discovery Kit </span>
+                                        <span class="capacity_product">50ml</span>
+                                    </div>
+                                    <div class="product-name-detail d-none">
+                                        Laneige Lip Sleeping Mask EX Pink Lemonade Swirl 20g
+                                    </div>
+                                    <div class="product-name-note d-none">Giúp loại bỏ tế bào da chết trên môi, dưỡng ẩm cho đôi môi luôn căng mượt và đàn hồi</div>
+                                    <div class="product-price have-discount-label">
+                                        <span class="discount-label">15%</span>
+                                        <span class="price-old">1.000.000 ₫</span>
+                                        <span class="price-current">850.000 ₫</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn position-absolute btn-cart-product">
+                                    <a href="chitietsanpham.html">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </button>
+                            </div>
+                       </div>
+
+                        <div class="col-md-3">
+                            <div class="card" style="background-color: #ffffff; box-shadow: unset;">
+                                <div class="card-content">
+                                    <div class="flags flags-two-item">
+                                        <span class="new">New</span>
+                                    </div>
+                                    <div class="image">
+                                    <a href="chitietsanpham.html">
+                                        <img class="img-fluid" src="../image/products/tatcasanpham/Retinol.webp" alt="">
+                                    </a>
+                                    </div>
+                                </div>
+                                <div class="products-detail">
+                                    <div class="product-name">
+                                        <span>Kem Dưỡng Ngăn Ngừa Lão Hóa Laneige Perfect Renew Youth Retinol 30ml </span>
+                                        <span class="capacity_product">50ml</span>
                                     </div>
                                     <div class="product-name-detail d-none">
                                       Laneige Lip Sleeping Mask EX Pink Lemonade Swirl 20g
                                     </div>
                                     <div class="product-name-note d-none">Giúp loại bỏ tế bào da chết trên môi, dưỡng ẩm cho đôi môi luôn căng mượt và đàn hồi</div>
-                                  <div class="product-price have-discount-label">
-                                      <span class="discount-label">15%</span>
-                                      <span class="price-old">1.000.000 ₫</span>
-                                      <span class="price-current">850.000 ₫</span>
-                                  </div>
-                              </div>
+                                    <div class="product-price have-discount-label">
+                                        <span class="discount-label">10%</span>
+                                        <span class="price-old">1.750.000 ₫</span>
+                                        <span class="price-current">1.575.000 ₫</span>
+                                    </div>
+                                </div>
 
-                              <button class="btn position-absolute btn-cart-product">
-                                <a href="chitietsanpham.html">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </a>
-                             </button>
-                          </div>
-                       </div>
+                                <button class="btn position-absolute btn-cart-product">
+                                    <a href="chitietsanpham.html">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                               </button>
+                            </div>
+                        </div>
 
-                       <hr>
+                    <div class="col-md-3">
+                        <div class="card" style="background-color: #ffffff; box-shadow: unset;">
+                            <div class="card-content">
+                                <div class="flags flags-two-item">
+                                    <span class="new">New</span>
+                                    <span class="best">best</span>
+                                </div>
+
+                                <div class="image">
+                                   <a href="chitietsanpham.html">
+                                       <img class="img-fluid" src="../image/products/kemduong/7._square_1_.webp" alt="">
+                                   </a>
+                                </div>
+                            </div>
+
+                            <div class="products-detail">
+                                <div class="product-name">
+                                    <span>Kem Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Cream Dry 20ml </span>
+                                    <span class="capacity_product">50ml</span>
+                                </div>
+
+                                <div class="product-name-detail d-none">
+                                      Laneige Lip Sleeping Mask EX Pink Lemonade Swirl 20g
+                                </div>
+
+                                <div class="product-name-note d-none">Giúp loại bỏ tế bào da chết trên môi, dưỡng ẩm cho đôi môi luôn căng mượt và đàn hồi</div>
+                                    <div class="product-price have-discount-label">
+                                        <span class="discount-label">15%</span>
+                                        <span class="price-old">1.000.000 ₫</span>
+                                        <span class="price-current">850.000 ₫</span>
+                                    </div>
+                                </div>
+
+                                <button class="btn position-absolute btn-cart-product">
+                                    <a href="chitietsanpham.html">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </a>
+                                </button>
+                            </div>
+                         </div>
+                    </div>
+
+                       <hr class="my-4">
 
                 </div>
             </div>
