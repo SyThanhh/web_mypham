@@ -1,8 +1,8 @@
 let $ = document.querySelector.bind(document)
 let $$ = document.querySelectorAll.bind(document)
-let info;
 
-const card = $$('.card')
+
+const card = $('.card')
 const image = $$('.image')
 const iconCart = $$('.btn-cart-product')
 function handelDetailsProducts() {
@@ -26,7 +26,7 @@ buttons.forEach((button, index) => {
 
 
 function saveLocalStorage() {
-    return localStorage.setItem('infoProduct', JSON.stringify(info));
+    return localStorage.setItem('infoProduct', JSON.stringify(info))
 }
 
 function queryInfoProduct(element, index) {
@@ -45,7 +45,7 @@ function queryInfoProduct(element, index) {
             info = {
                 'imageU' : imageUrl,
                 'name' : productName,
-                'capacity': capacityProduct,
+                'capacity':capacityProduct,
                 'description' : productNameDetails,
                 // 'note' : productNameNote,
                 'discount' : discountLabel,
@@ -55,7 +55,6 @@ function queryInfoProduct(element, index) {
             };
             saveLocalStorage();
         }
-
 }
 
 function getInfoProductPutIntoPage() {
@@ -83,15 +82,9 @@ function getInfoProductPutIntoPage() {
     imageU.src = info.imageU;
     elementH4.textContent = info.name;
     elementH5.textContent = info.description;
-<<<<<<< HEAD
-    detailProductNote.textContent = info.note;
-    discount.textContent = info.discount;       
-    priceOld.textContent = info.priceOld;       
-=======
     // detailProductNote.textContent = info.note;
     discount.textContent = info.discount;
     priceOld.textContent = info.priceOld;
->>>>>>> 28989ebd744d8dc0267d969a292cd8f9f5b08ca8
     priceCurrent.textContent = info.priceCurrent;
     capacityDetails.textContent = info.capacity;
 
