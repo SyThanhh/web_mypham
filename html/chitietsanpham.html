@@ -235,7 +235,7 @@
        
 
         <!--Content-->
-        <div class="row m-0 d-flex justify-content-around text-align-center" style="padding-top: 70px;" data-id = "6">
+        <div class="row m-0 d-flex justify-content-around text-align-center" style="padding-top: 70px;" data-id="">
             <div class="col-6 beautiful">
                 <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                     <!-- Indicators -->
@@ -259,7 +259,7 @@
                          
                  
                     <!-- The slideshow -->
-                    <div class="carousel-inner">
+                    <div class="carousel-inner" id="chiTiet-id">
                         <div class="carousel-item active" >
                             <img src="../image/makeup/img1_kemnen.jpg" class="product-img" alt="">
                         </div>
@@ -312,6 +312,7 @@
 
                 <div class="d-flex mt-3 justify-content-between">
                     <div class="d-flex align-items-center">
+                        <span class="text-secondary capacity_product" style="font-size: 18px; margin-right: 10px;">130ml</span>
                         <div class="wrapper d-flex align-items-center">
                             <span class="minus" style="padding-left: 7px;" onclick="decrement()">-</span>
                             <span class="num" id="counter">1</span>
@@ -323,11 +324,19 @@
                         <div class="d-flex align-items-center" style="margin-right: 10px;">
                             <span class="text-primary discount" style="margin-right: 10px;">10%</span>
                             <span id="old-price" class="price-wrapper ">
+<<<<<<< HEAD
                                 <span class="prices price_old text-secondary">960.000₫</span>
                             </span>
                         </div>
                         <span id="product-price" class="price-wrapper ">
                             <span class="price price_current">864.000₫</span>
+=======
+                                <span class="prices price_old text-secondary">₫</span>
+                            </span>
+                        </div>
+                        <span id="product-price" class="price-wrapper ">
+                            <span class="price price_current">₫</span>
+>>>>>>> 28989ebd744d8dc0267d969a292cd8f9f5b08ca8
                         </span>
                     </div>
                 </div>
@@ -641,7 +650,7 @@
                           </div>
                           <div class="products-detail">
                               <div class="product-name">
-                                  <span>Kem Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Cream Dry 50ml </span>
+                                  <span>Kem Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Cream Dry <span class="product-name-note">50ml</span> </span>
                               </div>
                               <div class="product-price have-discount-label">
                                   <span class="discount-label">15%</span>
@@ -657,7 +666,7 @@
                           </button>
                       </div>
                    </div>
-                   <div class="col-2">
+                   <!-- <div class="col-2">
                     <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                         <div class="card-content">
                             <div class="flags flags-two-item">
@@ -687,37 +696,41 @@
                             </a>
                           </button>
                       </div>
-                   </div>
+                   </div> -->
                    
                    <div class="col-2">
                     <div class="card" style="background-color: #ffffff; box-shadow: unset;">
                         <div class="card-content">
                             <div class="flags flags-two-item">
                                 <span class="new">New</span>
-                                <span class="best">best</span>
                               </div>
-                            <div class="image">
-                               <a href="#">
-                                   <img class="img-fluid" src="../image/products/tatcasanpham/20220602_final_radian-c-spot-serum_pdp_rtb02_pc.jpg" alt="">
+                            <div class="image" onclick="handelDetailsProducts()">
+                               <a href="chitietsanpham.html">
+                                   <img class="img-fluid" src="../image/products/tatcasanpham/kemchongnang.webp" alt="">
                                </a>
                             </div>
                           </div>
                           <div class="products-detail">
                               <div class="product-name">
-                                  <span>Kem Dưỡng Ẩm Cho Da Thường Và Da Khô Laneige Water Bank Blue HA Cream Dry 50ml </span>
-                              </div>
+                                  <span>Kem Chống Nắng Dưỡng Sáng Da Laneige Radian-C Sun Cream </span>
+                                  <span class="capacity_product">50ml</span>
+                                </div>
+                                <div class="product-name-detail d-none">
+                                  Laneige Lip Sleeping Mask EX Pink Lemonade Swirl 20g
+                                </div>
+                                <div class="product-name-note d-none">Giúp loại bỏ tế bào da chết trên môi, dưỡng ẩm cho đôi môi luôn căng mượt và đàn hồi</div>
                               <div class="product-price have-discount-label">
-                                  <span class="discount-label">15%</span>
-                                  <span class="price-old">1.000.000 ₫</span>
-                                  <span class="price-current">850.000 ₫</span>
+                                  <span class="discount-label">10%</span>
+                                  <span class="price-old">730.000 ₫</span>
+                                  <span class="price-current">600.000 ₫</span>
                               </div>
                           </div>
-       
+
                           <button class="btn position-absolute btn-cart-product">
-                            <a href="#">
+                            <a href="chitietsanpham.html">
                                 <i class="fas fa-shopping-cart"></i>
                             </a>
-                          </button>
+                         </button>
                       </div>
                    </div>
        
