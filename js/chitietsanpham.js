@@ -77,6 +77,7 @@ function queryInfoProduct(element)  {
                 // 'note' : productNameNote,
                 'discount' : discountLabel,
                 'priceOld' : priceOld,
+                'quantity' : 1,
                 'priceCurrent' : priceCurrent ,
                 'index' : randomNumbers[0]
             };
@@ -98,7 +99,6 @@ function getInfoProductPutIntoPage() {
     const priceOld = document.querySelector('.price_old');
     const priceCurrent = document.querySelector('.price_current');
     const capacityDetails = document.querySelector('.text-secondary.capacity_product');
-    
     const newImage = `url('${info.imageU}')`;
     listItems.forEach(item => {
         if (item.classList.contains("active")) {

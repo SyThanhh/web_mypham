@@ -3,6 +3,7 @@ function increment() {
     var currentValue = parseInt(counter.textContent, 10);
     currentValue += 1;
     counter.textContent = currentValue < 10 ? "0" + currentValue : currentValue;
+    updateLocalStorage()
 }
 
 function decrement() {
@@ -12,6 +13,7 @@ function decrement() {
         currentValue -= 1;
         counter.textContent = currentValue < 10 ? "0" + currentValue : currentValue;
     }
+    updateLocalStorage()
 }
 
 
@@ -39,3 +41,13 @@ accordionItemHeaders.forEach(accordionItemHeader => {
       
     });
 });
+
+function updateLocalStorage() {
+  const quantity = 'quantity';
+  const info = getLocalStorage();
+  const counterValue = parseInt(document.getElementById('counter').innerText,);
+  info[quantity] = counterValue;
+  // Cập nhật giá trị vào local storage
+  return localStorage.setItem('infoProduct', JSON.stringify(info))
+
+}

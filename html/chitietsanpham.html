@@ -210,7 +210,9 @@
                             </div>
 
                             <!--Buy button-->
-                            <button type="button" class="btn-buy">Thanh toán</button>
+                            <a href="../html/hoadonCart.html">
+                                <button type="button" class="btn-buy">Thanh toán</button>
+                            </a>
 
                             <!--Cart Close-->
                             <i class="fas fa-times" id="close-cart"></i>
@@ -336,9 +338,11 @@
                     <button type="submit" title="THÊM VÀO GIỎ" class="action tocart" id="product-addtocart-button">
                         <span>THÊM VÀO GIỎ</span>
                     </button> 
-                    <button type="submit" title="MUA NGAY" class="action primary tocheckout" id="product-addtocheckout-button">
-                        <span>MUA NGAY</span>
-                    </button> 
+                   <a href="../html/hoadonProductItem.html">
+                        <button type="submit" title="MUA NGAY" class="action primary tocheckout" id="product-addtocheckout-button" onclick="displayProductList()">
+                            <span>MUA NGAY</span>
+                        </button> 
+                   </a>
                 </div>
 
             </div>
@@ -822,5 +826,9 @@
     <script src="../js/chitietsanpham.js"></script>
     <script src="../js/signupRegex.js"></script>
     <script src="../js/addToCart.js"></script>
+
+    <!-- Tính tổng tiền -->
+    <script src="../js/getTotalPriceCarts.js"></script>
+   
 </body>
 </html>
