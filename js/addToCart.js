@@ -129,7 +129,7 @@ function updateCartUI(){
                 <div class="cart-item-price">
                     <span>Đơn giá: ${value.price}đ</span>
                     <br>
-                    <input type="number" class="cart-item-quantity" value="${value.quantity}">
+                    <input type="number" class="cart-item-quantity" value="${value.quantity}" min="1">
                 </div>
                 
             </div>
@@ -138,19 +138,21 @@ function updateCartUI(){
         `;
         
         const quantityInput = cartItem.querySelector('.cart-item-quantity');
+
+        // Thêm sự kiện input để theo dõi thay đổi giá trị
         quantityInput.addEventListener('change', (event) => {
             const newQuantity = parseInt(event.target.value);
-            if (!isNaN(newQuantity)) {
+            if (!isNaN(newQuantity) && newQuantity >= 1) { 
                 // Cập nhật số lượng sản phẩm trong giỏ hàng
                 value.quantity = newQuantity;
                 LocalCart.addItemToLocalCart(key, value);
                 updateCartUI();
-            } else {
-                // Nếu người dùng nhập số lượng không hợp lệ, đặt lại số lượng sản phẩm trong giỏ hàng
-                event.target.value = value.quantity;
+            }else{
+                value.quantity = 1;
+                LocalCart.addItemToLocalCart(key, value);
+                updateCartUI();
             }
         });
-
 
         //Xóa sản phẩm
        cartItem.lastElementChild.addEventListener('click', ()=>{
@@ -161,7 +163,7 @@ function updateCartUI(){
     }
 
 
-    //Cập nhật số lượng sản phẩm
+    //Cập nhật số lượng sản phẩmd
     if(count > 0){
         cartIcon.classList.add('non-empty');
         let root = document.querySelector(':root');

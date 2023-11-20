@@ -18,15 +18,14 @@
 .beautiful .carousel-controls{
     position: absolute;
     left: 57%;
-    bottom: 40px;
-    z-index: 10;
+    bottom: 130px;
+    z-index: -1;
     transform: translateX(-50%);
 }
 
 .carousel-indicators{
     position: relative;
 }
-
 
 .beautiful .carousel-indicators li{
     height: 70px;
