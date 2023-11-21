@@ -19,7 +19,7 @@
     position: absolute;
     left: 57%;
     bottom: 130px;
-    z-index: -1;
+    z-index: 1;
     transform: translateX(-50%);
 }
 

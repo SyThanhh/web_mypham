@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
            const nameParts = productData.name.split('\n');
            const mainName = nameParts[0];
            const additionalName = nameParts[1] || ''; // Phần sau /n (nếu có)
-   
+
            function displayProductList() {
                const productBody = document.getElementById('productBody');
            
