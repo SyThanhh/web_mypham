@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clickAddProducts();
     });
 
+    
     function clickAddProducts() {
         const cartData = JSON.parse(localStorage.getItem('cartItems'));
         const totalPriceCart = document.querySelector('.total-price');
