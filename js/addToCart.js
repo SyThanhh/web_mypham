@@ -3,6 +3,17 @@ let cartIcon = document.querySelector(".cart-icon");
 let cart = document.querySelector(".cart-info");
 let cartClose = document.querySelector("#close-cart");
 
+
+document.addEventListener('mousedown', function (event) {
+    const isClickInsideModal = cart.contains(event.target);
+    const isClickOnCartIcon = cartIcon.contains(event.target);
+
+    if (!isClickInsideModal && !isClickOnCartIcon && cart.classList.contains('active')) {
+        cart.classList.remove('active');
+    }
+});
+
+
 //Open cart
 cartIcon.onclick = () => {
     cart.classList.add("active");
@@ -12,7 +23,6 @@ cartIcon.onclick = () => {
 cartClose.addEventListener("click", function () {
     cart.classList.remove("active");
 });
-
 
 class CartItem{
     constructor(name, img, price){

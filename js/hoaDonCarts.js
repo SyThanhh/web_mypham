@@ -26,14 +26,13 @@ for (const key in cartData) {
         const additionalName = nameParts[1] || ''; // Phần sau /n (nếu có)
 
 
-
         // Thêm dòng sản phẩm vào bảng
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${rowNumber}</td>
             <td>${mainName}</td>
             <td>${additionalName}</td>
-            <td><img src="${product.img}" alt="${product.name}" style="max-width: 50px;"></td>
+            <td><img src="${product.img}" alt="${product.name}" style="max-width: 100px;"></td>
             <td>${formattedPrice} ₫</td>
             <td>${product.quantity}</td>
             <td>${total.toLocaleString()} ₫</td>
