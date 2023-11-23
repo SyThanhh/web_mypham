@@ -42,4 +42,11 @@
     height: 50px;
     padding-left: 25px;
     padding-right: 25px;
+    font-size: 18px;
+}
+
+.button:hover{
+    color: white;
+    background-color: black;
+    font-size: 20px;
 }
