@@ -143,8 +143,19 @@ function taoTaiKhoan(){
  function successRegister(){
 
      if(taoTaiKhoan() === true){
-         // Show the modal popup 
+       
+        let phone = document.getElementById('txtPhone').value;
+        let pwd = document.getElementById("txtPwd").value;
+
+        taiKhoan = {
+            "sdt" : phone,
+            "password" : pwd
+        }
+        
+        localStorage.setItem('user', JSON.stringify(taiKhoan))
+        //  // Show the modal popup 
          $('#myModal').modal('show');
+        
      }
      // Close the modal
      document.getElementById("successModalButton").addEventListener("click", function () {
