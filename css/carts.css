@@ -7,6 +7,7 @@
     position: fixed;
     overflow: scroll;
     margin-top: 5px;
+    padding: 0;
 }
 
 .cart-info.active{
@@ -113,7 +114,7 @@
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    margin: 20px auto;
+    margin: 20px auto 100px;
     justify-content: center;
     align-items: center;
     background-image: var(--primary-color);
