@@ -223,4 +223,36 @@ document.addEventListener('DOMContentLoaded', ()=>{
     });
    
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartUI();
+
+    const removeButtons = document.querySelectorAll('.fas.fa-trash.cart-remove');
+    removeButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            LocalCart.removeItemFromCart(index);
+            updateCartUI();
+            recalculateTotalPrice();
+        });
+    });
+});
+
+function recalculateTotalPrice() {
+    const cartData = JSON.parse(localStorage.getItem('cartItems'));
+    const totalPriceCart = document.querySelector('.total-price');
+
+    let totalPrice = 0;
+    for (const key in cartData) {
+        if (cartData.hasOwnProperty(key)) {
+            const product = cartData[key];
+
+            const price = parseInt(product.price.replace(/\D+/g, ''));
+            const total = price * product.quantity;
+            totalPrice += total;
+        }
+    }
+
+    totalPriceCart.textContent = totalPrice.toLocaleString() + " ₫";
+}
+
     
