@@ -40,12 +40,36 @@ document.addEventListener("DOMContentLoaded", function() {
    
                // Tăng số thứ tự
                index++;
-                   
+               
+               
            }
+
            displayProductList()
    
+
+            function luuHoaDon() {
+                const hoaDonProduct = [];
+                const sp = {
+                        'stt' : 1,
+                        'img' : productData.imageU,
+                        'name' : mainName,
+                        'dungtich' : productData.capacity,
+                        'mota' : productData.description,
+                        'quantity' : productData.quantity,
+                        'Price' : formattedPrice,
+                        'totalPrice' : totalPrice.toLocaleString() + "₫"
+                }
+                hoaDonProduct.push(sp);
+                    
+                
+                localStorage.setItem('hoadonItem', JSON.stringify(hoaDonProduct));
+            }
+            document.getElementById('btn-xacNhanItem').addEventListener('click', function() {
+                luuHoaDon()
+            })
+
            function getLocalStorage() {
            return JSON.parse(localStorage.getItem('infoProduct')) ?? []
            }
-   
+
    });
