@@ -39,22 +39,6 @@ for (const key in cartData) {
         `;
         tbody.appendChild(row);
         rowNumber++;
-        // const hoaDon = [];
-        // for(let i = 1; i <= rowNumber; i++) {
-        //      const sp = {
-        //          'stt' : i,
-        //          'name' : mainName,
-        //          'dungtich' : additionalName,
-        //          'img' : product.img,
-        //          'Price' : formattedPrice,
-        //          'quantity' : product.quantity,
-        //          'totalPrice' : totalPrice.toLocaleString()
-        //      }
-        //      hoaDon.push(sp);
-        // }
-        // let totalAllPrice = totalPrice.toLocaleString() + " ₫";
-        // hoaDon.push(totalAllPrice);
-        // localStorage.setItem('hoadon', JSON.stringify(hoaDon));
     }
 }
 
@@ -111,6 +95,6 @@ for (const key in cartData) {
         let totalAllPrice = totalPrice.toLocaleString() + " ₫";
         hoaDon.push(totalAllPrice);
         localStorage.setItem('hoadon', JSON.stringify(hoaDon));
-    }
+     }
     }
 }
